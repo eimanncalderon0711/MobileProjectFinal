@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { TouchableOpacity, View, Text, secureTextEntry } from 'react-native'
+import { TouchableOpacity, View, Text, secureTextEntry, ImageBackground } from 'react-native'
 import Buttons from '../components/Buttons'
 import InputFields from '../components/InputFields'
+const bgimg = require("./assets/bgimg.png");
 
 function Register({navigation}) {
 
@@ -47,8 +48,8 @@ function Register({navigation}) {
             {/* // <Text className="text-center text-md pb-3 text-red-600 font-medium">Error</Text> */}
             <Buttons style="w-[100%] bg-red-700 text-center text-white py-2 text-xl rounded-lg" title="Create" clicker={handleSubmit}/>
         </View>
-       
-        
+        <ImageBackground source={bgimg} style={{flex: 1}}>
+        </ImageBackground>
     </View>
   )
 }

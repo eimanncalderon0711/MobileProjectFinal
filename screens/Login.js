@@ -5,9 +5,11 @@ import {
   Text,
   secureTextEntry,
   SafeAreaView,
+  ImageBackground
 } from "react-native";
 import Buttons from "../components/Buttons";
 import InputFields from "../components/InputFields";
+const bgimg = require("./assets/bgimg.png");
 
 function Login({navigation}) {
   return (
@@ -39,6 +41,8 @@ function Login({navigation}) {
           clicker={() => console.log("adadad")}
         />
       </View>
+      <ImageBackground source={bgimg} style={{flex: 1}}>
+      </ImageBackground>
     </View>
   );
 }
