@@ -1,10 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { View, } from 'react-native';
-import LandingPage from './screens/LandingPage';
-import Login from './screens/Login';
-import Register from './screens/Register';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
+import LandingPage from "./screens/LandingPage";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,9 +19,5 @@ export default function App() {
         </Stack.Navigator>
       </View>
     </NavigationContainer>
-    
-    
   );
 }
-
-
