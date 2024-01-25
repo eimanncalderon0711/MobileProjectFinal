@@ -9,12 +9,37 @@ function Register({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errorText, setErrText] = useState("Errors")
+  const [errorText, setErrText] = useState("")
   const [isError, setisError] = useState(false);
 
+   
+   
   const handleSubmit = () => {
-      userName === "" ? (setErrText("Please Input A Username"), setisError(true)): (setErrText(""), setisError(false), console.log(userName), navigation.navigate("Login"))
-      email === "" ? (setErrText("Please Input A email"), setisError(true)): (setErrText(""), setisError(false), console.log(email), navigation.navigate("Login"));
+    if(userName === "" && email === "" && password === "" && confirmPassword === ""){
+        setErrText("Please Provide an Input");
+        setisError(true);
+    }
+    else if(userName === "" || email === ""){
+        setErrText("Please input your Username or Email");
+        setisError(true);
+    }
+    else if(password === "" || confirmPassword === ""){
+        setErrText("Please input your Password");
+        setisError(true);
+    }
+    else if(password !== confirmPassword){
+        setErrText("Password Does not match");
+        setisError(true);
+    }
+    else if (userName !== "" && email !== "" && password !== "" && confirmPassword !== ""){
+        setUsername("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        setErrText("");
+        setisError(false);
+        navigation.navigate("Login")
+    }
 }
     
   return (
