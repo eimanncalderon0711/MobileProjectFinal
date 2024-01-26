@@ -68,6 +68,7 @@ function Register({ navigation }) {
             title="Username"
             label="Username"
             onchange={(e) => setUsername(e)}
+            styles="text-white text-[18px] py-2"
           />
         </View>
         <View>
@@ -75,6 +76,7 @@ function Register({ navigation }) {
             title="Email"
             label="Email"
             onchange={(e) => setEmail(e)}
+            styles="text-white text-[18px] py-2"
           />
         </View>
         <View>
@@ -83,6 +85,7 @@ function Register({ navigation }) {
             title="Password"
             label="Password"
             onchange={(e) => setPassword(e)}
+            styles="text-white text-[18px] py-2"
           />
         </View>
         <View>
@@ -91,6 +94,7 @@ function Register({ navigation }) {
             title="Confirm Password"
             label="Confirm Password"
             onchange={(e) => setConfirmPassword(e)}
+            styles="text-white text-[18px] py-2"
           />
         </View>
       </View>

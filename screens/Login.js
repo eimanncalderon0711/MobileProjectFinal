@@ -17,10 +17,10 @@ function Login({navigation}) {
       </View>
       <View className="gap-y-8 w-[80%]">
         <View>
-          <InputFields title="Email" label="Email" />
+          <InputFields title="Email" label="Email" styles="text-white text-[18px] py-2"/>
         </View>
         <View>
-          <InputFields hidden={true} title="Password" label="Password" />
+          <InputFields hidden={true} title="Password" label="Password" styles="text-white text-[18px] py-2" />
         </View>
         <TouchableOpacity className="self-end">
           <Buttons style="text-[15px] text-white" title="Forgot Password" />
