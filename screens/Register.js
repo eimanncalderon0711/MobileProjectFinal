@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { TouchableOpacity, View, Text, secureTextEntry } from "react-native";
+import { TouchableOpacity, View, Text, secureTextEntry, ImageBackground, Image } from "react-native";
 import Buttons from "../components/Buttons";
 import InputFields from "../components/InputFields";
+const bgimg = require("../assets/bgimg1.png");
+const mylogo = require("../assets/SYNEMA LOGO.png");
 
 function Register({ navigation }) {
   const [userName, setUsername] = useState("");
@@ -54,12 +56,13 @@ function Register({ navigation }) {
   };
 
   return (
-    <View className="justify-center items-center pb-6 flex-1 bg-blue-600">
+    <ImageBackground source={bgimg} className="flex-1 object-contain bg-no-repeat bg-scroll">
+    <View className="justify-center items-center pb-6 flex-1">
       <View className="mb-8">
-        <Text className="text-2xl font-extrabold">Logo</Text>
+      <Image source={mylogo} style={{width:150, height:150, marginBottom:-50}}></Image>
       </View>
       <View className="mb-3">
-        <Text className="text-2xl font-extrabold pb-2">Create Account</Text>
+        <Text className="text-2xl font-extrabold pb-2 text-white">Create Account</Text>
       </View>
 
       <View className="gap-y-5 w-[80%]">
@@ -113,6 +116,7 @@ function Register({ navigation }) {
         />
       </View>
     </View>
+    </ImageBackground>
   );
 }
 

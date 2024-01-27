@@ -16,7 +16,7 @@ export default function App() {
     <NavigationContainer>
       <View className="flex-1 bg-gray-800">
         <Stack.Navigator>
-          <Stack.Screen name="Payment Confirmation" component={PaymentInfo} />
+          <Stack.Screen name="Payment Confirmation" component={LandingPage} />
           <Stack.Screen name="Payment Information" component={PaymentInfo} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />

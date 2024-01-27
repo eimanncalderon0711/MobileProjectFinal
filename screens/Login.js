@@ -5,15 +5,20 @@ import {
   Text,
   secureTextEntry,
   SafeAreaView,
+  ImageBackground,
+  Image
 } from "react-native";
 import Buttons from "../components/Buttons";
 import InputFields from "../components/InputFields";
+const bgimg = require("../assets/bgimg1.png");
+const mylogo = require("../assets/SYNEMA LOGO.png");
 
 function Login({navigation}) {
   return (
-    <View className="justify-evenly items-center flex-1 gap-8 bg-blue-600">
+    <ImageBackground source={bgimg} className="flex-1 object-contain bg-no-repeat bg-scroll">
+    <View className="justify-evenly items-center flex-1 gap-8">
       <View>
-        <Text className="text-2xl font-extrabold pb-2">Logo</Text>
+      <Image source={mylogo} style={{width:250, height:250, marginBottom:-200, marginTop:-80}}></Image>
       </View>
       <View className="gap-y-8 w-[80%]">
         <View>
@@ -30,7 +35,7 @@ function Login({navigation}) {
       <View className="w-[80%] h-[10%] justify-between">
         <Buttons
           style="text-white text-center"
-          title="Don't Have an Account Yet?"
+          title="Don't Have an Account Yet? Sign up"
           clicker={() => navigation.navigate("Register")}
         />
         <Buttons
@@ -40,6 +45,7 @@ function Login({navigation}) {
         />
       </View>
     </View>
+    </ImageBackground>
   );
 }
 
