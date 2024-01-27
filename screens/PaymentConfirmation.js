@@ -1,15 +1,17 @@
 import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
+import { ScrollView, Text, View, Image } from 'react-native'
 import Buttons from '../components/Buttons'
 import InputFields from '../components/InputFields'
 
+const gcash = require("../assets/GCASHLOGO.png");
 function PaymentConfirmation() {
   return (
     // <ScrollView>
     <View className="flex-1 justify-center gap-y-20">
         <View className="gap-y-10 w-[90%] self-center">
             <Text className="text-[#1B2C49] font-semibold text-lg">Payment Method</Text>
-            <Text className="self-center">Gcash Logo</Text>
+            {/* <Text className="self-center">Gcash Logo</Text> */}
+            <Image source={gcash} style={{width:250, marginLeft:35}}/>
             <View className="border-t-[1px]">
                 <View className="flex-row justify-between">
                     <Text className="pt-4 text-[#838383]">Payment Method</Text>
