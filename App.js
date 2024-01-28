@@ -9,6 +9,7 @@ import PaymentInfo from "./screens/PaymentInfo";
 import PaymentConfirmation from "./screens/PaymentConfirmation";
 import HomePage from "./screens/HomePage";
 import Personal from "./screens/Personal";
+import CinemaPage from "./screens/CinemaPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
     <NavigationContainer>
       <View className="flex-1 bg-gray-800">
         <Stack.Navigator>
+          <Stack.Screen name="CinemaPage" component={CinemaPage} />
           <Stack.Screen name="LandingPage" component={LandingPage} />
           <Stack.Screen name="Personal" component={Personal} />
           <Stack.Screen
