@@ -26,34 +26,40 @@ function CinemaPage({ navigation }) {
       </View>
       <View>
         <View className="rounded-xl overflow-hidden shadow-black p-5">
-          <ImageBackground
-            className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
-            source={rain}
-          >
-            <Text className="text-white text-center text-xl font-bold">
-              The Rain
-            </Text>
-          </ImageBackground>
+          <TouchableOpacity onPress={navigation.navigate("MoviePage")}>
+            <ImageBackground
+              className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
+              source={rain}
+            >
+              <Text className="text-white text-center text-xl font-bold">
+                The Rain
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
         </View>
         <View className="rounded-xl overflow-hidden shadow-black p-5 py-0">
-          <ImageBackground
-            className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
-            source={aqua}
-          >
-            <Text className="text-white text-center text-xl font-bold">
-              Aquaman and The Lost Kingdom
-            </Text>
-          </ImageBackground>
+          <TouchableOpacity onPress={navigation.navigate("MoviePage")}>
+            <ImageBackground
+              className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
+              source={aqua}
+            >
+              <Text className="text-white text-center text-xl font-bold">
+                Aquaman and The Lost Kingdom
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
         </View>
         <View className="rounded-xl overflow-hidden shadow-black p-5">
-          <ImageBackground
-            className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
-            source={openheimer}
-          >
-            <Text className="text-white text-center text-xl font-bold">
-              Openheimer
-            </Text>
-          </ImageBackground>
+          <TouchableOpacity onPress={navigation.navigate("MoviePage")}>
+            <ImageBackground
+              className="object-cover rounded-3xl h-32 w-full overflow-hidden flex justify-center items-center"
+              source={openheimer}
+            >
+              <Text className="text-white text-center text-xl font-bold">
+                Openheimer
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>

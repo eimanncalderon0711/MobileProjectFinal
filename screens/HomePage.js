@@ -3,6 +3,8 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Cards from "../components/Cards";
 
 const image = require("../assets/SMDT.png");
+const image2 = require("../assets/centrio.png");
+const image3 = require("../assets/smuptown.png");
 
 function HomePage({ navigation }) {
   return (
@@ -31,11 +33,13 @@ function HomePage({ navigation }) {
         <Text className="text-2xl font-semibold">Available Cinema</Text>
         <View className="mt-3 w-[80%]">
           <Text className="text-left pl-2 text-lg mt-3">SM CDO Downtown</Text>
-          <Cards image={image} />
-          {/* <Text className="text-left pl-2 text-lg mt-3">Centrio Ayala Mall</Text>
-                <Cards/>
-                <Text className="text-left pl-2 text-lg mt-3">SM City</Text>
-                <Cards/> */}
+          <Cards image={image} press={navigation.navigate("CinemaPage")} />
+          <Text className="text-left pl-2 text-lg mt-3">
+            Centrio Ayala Mall
+          </Text>
+          <Cards image={image2} press={navigation.navigate("CinemaPage")} />
+          <Text className="text-left pl-2 text-lg mt-3">SM City</Text>
+          <Cards image={image3} press={navigation.navigate("CinemaPage")} />
         </View>
       </View>
     </ScrollView>
